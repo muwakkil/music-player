@@ -9,13 +9,25 @@ const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
-const songs = ['hey', 'summer', 'ukulele'];
-let songIndex = 2;
+const songs = ["01 Lose My Mind",
+  "02 No Room for a Saint",
+  "03 Drive",
+  "04 Just Keep Watching",
+  "05 Messy",
+  "06 Don’t Let Me Drown",
+  "07 Underdog",
+  "08 Grandma Calls the Boy Bad News",
+  "09 Bad as I Used to Be",
+  "10 Baja California",
+  "11 OMG!",
+  "12 All at Once"];
+
+let songIndex = 0;
 
 function loadSong(song) {
   title.innerText = song;
-  audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`;
+  audio.src = `music/f1-the-album_2025/${song}.mp3`;
+  cover.src = `images/cover_itemimage.JPG`;
 }
 
 loadSong(songs[songIndex]);
