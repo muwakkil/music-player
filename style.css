@@ -1,22 +1,55 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
+/* added */
 body {
-  background: linear-gradient(0deg, #f7f7f7 24%, #fcdddd 92%);
-  font-family: 'Lato', sans-serif;
+  background: linear-gradient(0deg, #fec26d 24%, #ff3434 92%);
+  background-size: 100% 400%;
+  background-position: 0% 0%;
+  font-family: "Michroma", sans-serif;
   margin: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: background-position 2s ease;
+}
+
+body.animate-bg {
+  animation: gradientMove 6s ease-in-out infinite alternate;
+}
+
+@keyframes gradientMove {
+  f 0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+    }
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  font-size: 65px;
+}
+
+
+p1{
+   margin-bottom: 150px; 
+   font-size: 20px;
 }
 
 .music-container {
@@ -75,7 +108,7 @@ h1 {
 }
 
 .progress-container {
-  background: #fff;
+  background: #faedd0;
   height: 4px;
   width: 100%;
   border-radius: 5px;
@@ -111,4 +144,12 @@ h1 {
 .action-btn-big {
   font-size: 30px;
   color: #cdc2d0;
+}
+
+/* added */
+p2 {
+    font-size: 12px;
+    position: absolute;
+    bottom: 20px;
+   transform: translateX(-50%); 
 }

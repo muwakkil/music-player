@@ -9,6 +9,7 @@ const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
+// added
 const songs = ["01 Lose My Mind",
   "02 No Room for a Saint",
   "03 Drive",
@@ -32,15 +33,18 @@ function loadSong(song) {
 
 loadSong(songs[songIndex]);
 
+// added
 function playSong() {
   musicContainer.classList.add('play');
   playBtn.querySelector('i.fas').classList.replace('fa-play', 'fa-pause');
+  document.body.classList.add('animate-bg');
   audio.play();
 }
 
 function pauseSong() {
   musicContainer.classList.remove('play');
   playBtn.querySelector('i.fas').classList.replace('fa-pause', 'fa-play');
+  document.body.classList.remove('animate-bg');
   audio.pause();
 }
 
